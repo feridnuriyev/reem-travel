@@ -9,7 +9,13 @@ export default function WhyUs() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
         <div className="lg:col-span-5 order-2 lg:order-1">
           <div className="aspect-[4/5] overflow-hidden">
-            <img src={IMAGES.guide} alt="Travel guide" className="w-full h-full object-cover" />
+            <img
+              src={IMAGES.guide}
+              alt="Travel guide"
+              className="w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </div>
 

@@ -32,6 +32,8 @@ export default function VipFleet() {
               src={IMAGES.vipTransfer}
               alt="Mercedes Vito VIP"
               className="w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <div className="lg:col-span-2 order-1 lg:order-2 space-y-6">

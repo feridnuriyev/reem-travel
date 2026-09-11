@@ -35,6 +35,8 @@ export default function FeaturedTours() {
                   src={IMG_MAP[i % IMG_MAP.length]}
                   alt={tour.title}
                   className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute top-4 left-4 bg-cream-50/95 backdrop-blur px-3 py-1.5 text-[10px] uppercase tracking-[0.22em] text-ink-700">
                   <Clock size={11} className="inline mr-1.5 -mt-0.5" />
