@@ -6,5 +6,6 @@ The production site stores locally optimized WebP derivatives of the images belo
 - `tour-istanbul.webp`: [Mathias Reding on Unsplash](https://unsplash.com/photos/a-boat-sailing-under-a-bridge-qj_nvDGNA_s).
 - `tour-cappadocia.webp`: [Chloe Lefleur on Unsplash](https://unsplash.com/photos/a-group-of-hot-air-balloons-flying-over-a-valley-ygtKS8lyjb4).
 - `vip-transfer.webp`: [Pexels](https://www.pexels.com/license/).
+- `hotel-suite.webp`: [Unsplash](https://unsplash.com/license/).
 
 Unsplash and Pexels permit free commercial and non-commercial use of their standard stock images. Do not use these assets as standalone stock-image products or imply that a depicted person or brand endorses Reem Travel.

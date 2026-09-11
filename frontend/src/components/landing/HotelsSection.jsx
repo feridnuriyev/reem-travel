@@ -24,17 +24,27 @@ export default function HotelsSection() {
   const visible = filter === "all" ? hotels : hotels.filter((h) => (h.region || h.city) === filter);
 
   return (
-    <section id="hotels" data-testid="hotels-section" className="py-24 lg:py-32 bg-cream-50">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+    <section id="hotels" data-testid="hotels-section" className="relative overflow-hidden py-24 lg:py-32 bg-ink-900">
+      <img
+        src="/images/hotel-suite.webp"
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+        decoding="async"
+        className="absolute inset-0 w-full h-full object-cover opacity-30"
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-ink-900 via-ink-900/90 to-ink-900/70" />
+
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid lg:grid-cols-12 gap-10 mb-12">
           <div className="lg:col-span-7">
-            <p className="text-clay-500 uppercase tracking-[0.28em] text-xs mb-4">{t.hotels.label}</p>
-            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-ink-900 leading-[1.05] font-light tracking-tight">
+            <p className="text-clay-400 uppercase tracking-[0.28em] text-xs mb-4">{t.hotels.label}</p>
+            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-cream-50 leading-[1.05] font-light tracking-tight">
               {t.hotels.title}
             </h2>
           </div>
           <div className="lg:col-span-5 flex items-end">
-            <p className="text-ink-500 text-base leading-relaxed font-light">{t.hotels.subtitle}</p>
+            <p className="text-cream-50/80 text-base leading-relaxed font-light">{t.hotels.subtitle}</p>
           </div>
         </div>
 
@@ -46,7 +56,9 @@ export default function HotelsSection() {
               data-testid={`hotel-filter-${c}`}
               onClick={() => setFilter(c)}
               className={`px-5 py-2 text-xs uppercase tracking-[0.22em] border whitespace-nowrap transition-colors ${
-                filter === c ? "bg-ink-900 text-cream-50 border-ink-900" : "bg-transparent text-ink-700 border-ink-900/15 hover:border-ink-900/40"
+                filter === c
+                  ? "bg-clay-500 text-cream-50 border-clay-500"
+                  : "bg-cream-50/5 text-cream-50 border-cream-50/25 hover:bg-cream-50/15 hover:border-cream-50/50"
               }`}
             >
               {c === "all" ? t.hotels.filter_all : c}
@@ -141,6 +153,12 @@ export default function HotelsSection() {
                 </article>
               );
             })}
+          </div>
+        )}
+
+        {!loading && visible.length === 0 && (
+          <div className="border border-cream-50/20 bg-ink-900/45 backdrop-blur-sm p-8 text-cream-50/80">
+            {t.hotels.no_rooms}
           </div>
         )}
       </div>
