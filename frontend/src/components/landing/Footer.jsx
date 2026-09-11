@@ -18,10 +18,10 @@ export default function Footer() {
             <p className="text-cream-50/60 max-w-md leading-relaxed">{t.footer.tagline}</p>
 
             <div className="flex items-center gap-3 mt-8">
-              <a href="https://instagram.com" target="_blank" rel="noreferrer" data-testid="footer-instagram" aria-label="Instagram" className="w-10 h-10 border border-cream-50/20 rounded-full flex items-center justify-center hover:bg-clay-500 hover:border-clay-500 transition-colors">
+              <a href="https://www.instagram.com/reemgrouptravel/" target="_blank" rel="noreferrer" data-testid="footer-instagram" aria-label="Instagram" className="w-10 h-10 border border-cream-50/20 rounded-full flex items-center justify-center hover:bg-clay-500 hover:border-clay-500 transition-colors">
                 <Instagram size={16} />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noreferrer" data-testid="footer-facebook" aria-label="Facebook" className="w-10 h-10 border border-cream-50/20 rounded-full flex items-center justify-center hover:bg-clay-500 hover:border-clay-500 transition-colors">
+              <a href="https://www.facebook.com/reemtravel" target="_blank" rel="noreferrer" data-testid="footer-facebook" aria-label="Facebook" className="w-10 h-10 border border-cream-50/20 rounded-full flex items-center justify-center hover:bg-clay-500 hover:border-clay-500 transition-colors">
                 <Facebook size={16} />
               </a>
               <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noreferrer" data-testid="footer-whatsapp" aria-label="WhatsApp" className="w-10 h-10 border border-cream-50/20 rounded-full flex items-center justify-center hover:bg-whatsapp hover:border-whatsapp transition-colors">
