@@ -15,7 +15,7 @@ import {
   adminDeleteRoom,
   setAdminToken,
 } from "../../lib/api";
-import { LOGO_HORIZONTAL } from "../../lib/constants";
+import { LOGO_MARK } from "../../lib/constants";
 import { useLang } from "../../lib/i18n";
 import { Input } from "../../components/ui/input";
 import { Textarea } from "../../components/ui/textarea";
@@ -51,7 +51,7 @@ export default function AdminDashboard() {
       <aside className="lg:w-64 bg-ink-900 text-cream-50 p-6 lg:min-h-screen flex flex-col" data-testid="admin-sidebar">
         <Link to="/" className="flex items-center gap-3 mb-8 group" data-testid="admin-home">
           <div className="w-10 h-10 rounded-full bg-ink-900 ring-1 ring-cream-50/30 overflow-hidden">
-            <img src={LOGO_HORIZONTAL} alt="Reem" className="w-full h-full object-cover scale-[1.6] origin-left" style={{ objectPosition: "8% 50%" }} />
+            <img src={LOGO_MARK} alt="Reem Group" className="w-full h-full object-contain" />
           </div>
           <div>
             <div className="font-serif text-xl">{A.home}</div>

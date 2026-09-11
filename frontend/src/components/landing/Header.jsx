@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLang } from "../../lib/i18n";
-import { LOGO_HORIZONTAL, WHATSAPP_NUMBER } from "../../lib/constants";
+import { LOGO_HEADER, WHATSAPP_NUMBER } from "../../lib/constants";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -41,25 +41,14 @@ export default function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-5 lg:px-10 h-20 flex items-center justify-between gap-6">
-        <Link to="/" data-testid="logo-link" className="flex items-center gap-3 group flex-shrink-0">
-          <div className={`rounded-full overflow-hidden flex-shrink-0 transition-all ${onLight ? "bg-ink-900" : "bg-ink-900/80 ring-1 ring-cream-50/30"}`} style={{ width: 52, height: 52 }}>
-            <img
-              src={LOGO_HORIZONTAL}
-              alt="Reem Group Travel & Tourism"
-              loading="eager"
-              decoding="async"
-              className="w-full h-full object-cover scale-[1.6] origin-left"
-              style={{ objectPosition: "8% 50%" }}
-            />
-          </div>
-          <div className="hidden sm:flex flex-col leading-tight">
-            <span className={`font-serif text-xl tracking-tight ${onLight ? "text-ink-900" : "text-cream-50"}`}>
-              Reem<span className="italic font-light"> Group</span>
-            </span>
-            <span className={`text-[10px] uppercase tracking-[0.28em] ${onLight ? "text-ink-500" : "text-cream-50/70"}`}>
-              Travel · Tourism
-            </span>
-          </div>
+        <Link to="/" data-testid="logo-link" className="flex items-center group flex-shrink-0">
+          <img
+            src={LOGO_HEADER}
+            alt="Reem Group Travel, Tourism, Real Estate and Medical Tourism"
+            loading="eager"
+            decoding="async"
+            className="h-12 sm:h-14 w-auto object-contain"
+          />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-7">

@@ -8,8 +8,8 @@ export const GOOGLE_MAPS_LINK = "https://maps.app.goo.gl/xdrJKhPDTWYN8Cqw9";
 export const GOOGLE_MAPS_EMBED =
   "https://www.google.com/maps?q=Reem+Travel+Tourism+Istanbul&output=embed";
 
-export const LOGO_VERTICAL = "/brand/logo-vertical.webp";
-export const LOGO_HORIZONTAL = "/brand/logo-horizontal.webp";
+export const LOGO_HEADER = "/brand/reem-group-header.webp";
+export const LOGO_MARK = "/brand/favicon-192.png";
 
 export const IMAGES = {
   hero: "/images/hero-coast.webp",
