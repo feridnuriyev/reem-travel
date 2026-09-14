@@ -36,7 +36,13 @@ api.interceptors.request.use((config) => {
 // Gracefully handle expired/invalid admin tokens — clear & redirect once
 let redirecting = false;
 api.interceptors.response.use(
-  (r) => r,
+  (response) => {
+    const contentType = response.headers?.["content-type"] || "";
+    if (!contentType.includes("application/json")) {
+      return Promise.reject(new Error("The API returned an unexpected response."));
+    }
+    return response;
+  },
   (err) => {
     const status = err?.response?.status;
     const url = err?.config?.url || "";

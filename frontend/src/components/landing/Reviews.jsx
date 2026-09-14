@@ -16,7 +16,10 @@ export default function Reviews() {
 
   const load = () => {
     setLoading(true);
-    listReviews().then(setReviews).catch(() => setReviews([])).finally(() => setLoading(false));
+    listReviews()
+      .then((data) => setReviews(Array.isArray(data) ? data : []))
+      .catch(() => setReviews([]))
+      .finally(() => setLoading(false));
   };
 
   useEffect(load, []);

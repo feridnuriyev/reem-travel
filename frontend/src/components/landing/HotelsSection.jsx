@@ -13,7 +13,10 @@ export default function HotelsSection() {
   const [booking, setBooking] = useState(null); // { hotel, room }
 
   useEffect(() => {
-    listHotels().then((d) => setHotels(d)).catch(() => setHotels([])).finally(() => setLoading(false));
+    listHotels()
+      .then((data) => setHotels(Array.isArray(data) ? data : []))
+      .catch(() => setHotels([]))
+      .finally(() => setLoading(false));
   }, []);
 
   const cities = useMemo(() => {
